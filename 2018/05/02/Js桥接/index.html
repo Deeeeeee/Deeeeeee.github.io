@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>WebViewJavascriptBridge前端用法 | 痞老板的海之霸</title>
+  <title>H5与安卓/IOS通讯：桥接 | Dylan&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。 前端代码1234567891011121314151617181920212223/* Copy and paste setupWebViewJavascriptBr">
+  <meta name="description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WebViewJavascriptBridge前端用法">
-<meta property="og:url" content="http://yoursite.com/2018/05/02/WebViewJavascriptBridge 前端用法/index.html">
-<meta property="og:site_name" content="痞老板的海之霸">
-<meta property="og:description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。 前端代码1234567891011121314151617181920212223/* Copy and paste setupWebViewJavascriptBr">
+<meta property="og:title" content="H5与安卓&#x2F;IOS通讯：桥接">
+<meta property="og:url" content="http://yoursite.com/2018/05/02/Js桥接/index.html">
+<meta property="og:site_name" content="Dylan&#39;s Blog">
+<meta property="og:description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-02T08:17:41.000Z">
+<meta property="og:updated_time" content="2018-05-02T10:08:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WebViewJavascriptBridge前端用法">
-<meta name="twitter:description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。 前端代码1234567891011121314151617181920212223/* Copy and paste setupWebViewJavascriptBr">
+<meta name="twitter:title" content="H5与安卓&#x2F;IOS通讯：桥接">
+<meta name="twitter:description" content="WebViewJavascriptBridge用于支持native的iOS与javascript交互  简要原理在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。">
   
-    <link rel="alternative" href="/atom.xml" title="痞老板的海之霸" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Dylan&#39;s Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/avatar.png">
@@ -63,7 +63,7 @@ ga('send', 'pageview');
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">痞老板</a></h1>
+		  <h1 class="header-author"><a href="/">Dylan</a></h1>
 		</hgroup>
 		
 
@@ -111,7 +111,7 @@ ga('send', 'pageview');
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">痞老板</h1>
+			  <h1 class="header-author js-header-author">Dylan</h1>
 			</hgroup>
 			
 			
@@ -151,20 +151,20 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-WebViewJavascriptBridge 前端用法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Js桥接" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      WebViewJavascriptBridge前端用法
+      H5与安卓/IOS通讯：桥接
     </h1>
   
 
         
-        <a href="/2018/05/02/WebViewJavascriptBridge 前端用法/" class="archive-article-date">
-  	<time datetime="2018-05-02T08:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/05/02/Js桥接/" class="archive-article-date">
+  	<time datetime="2018-05-02T10:08:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
 </a>
         
       </header>
@@ -174,9 +174,10 @@ ga('send', 'pageview');
         <blockquote>
 <p>WebViewJavascriptBridge用于支持native的iOS与javascript交互</p>
 </blockquote>
-<h3 id="简要原理"><a href="#简要原理" class="headerlink" title="简要原理"></a>简要原理</h3><p>在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。</p>
-<h3 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Copy and paste setupWebViewJavascriptBridge into your JS*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setupWebViewJavascriptBridge</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.WebViewJavascriptBridge) &#123; <span class="keyword">return</span> callback(WebViewJavascriptBridge); &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.WVJBCallbacks) &#123; <span class="keyword">return</span> <span class="built_in">window</span>.WVJBCallbacks.push(callback); &#125;</span><br><span class="line">    <span class="built_in">window</span>.WVJBCallbacks = [callback];</span><br><span class="line">    <span class="keyword">var</span> WVJBIframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">    WVJBIframe.style.display = <span class="string">'none'</span>;</span><br><span class="line">    WVJBIframe.src = <span class="string">'wvjbscheme://__BRIDGE_LOADED__'</span>;</span><br><span class="line">    <span class="built_in">document</span>.documentElement.appendChild(WVJBIframe);</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">document</span>.documentElement.removeChild(WVJBIframe) &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/*  call setupWebViewJavascriptBridge and then use the bridge to register handlers and call ObjC handlers:*/</span></span><br><span class="line"> setupWebViewJavascriptBridge(<span class="function"><span class="keyword">function</span>(<span class="params">bridge</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* Initialize your app here */</span></span><br><span class="line">    bridge.registerHandler(<span class="string">'JS Echo'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data, responseCallback</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"JS Echo called with:"</span>, data)</span><br><span class="line">        responseCallback(data)</span><br><span class="line">    &#125;)</span><br><span class="line">    bridge.callHandler(<span class="string">'ObjC Echo'</span>, &#123;<span class="string">'key'</span>:<span class="string">'value'</span>&#125;, <span class="function"><span class="keyword">function</span> <span class="title">responseCallback</span>(<span class="params">responseData</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"JS received response:"</span>, responseData)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<h4 id="简要原理"><a href="#简要原理" class="headerlink" title="简要原理"></a>简要原理</h4><p>在OC环境和JS环境各自保存一个相互调用的信息。每一个调用之间都有id和callbackid来找到两个环境对应的处理。</p>
+<a id="more"></a>
+<h4 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Copy and paste setupWebViewJavascriptBridge into your JS*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setupWebViewJavascriptBridge</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.WebViewJavascriptBridge) &#123; <span class="keyword">return</span> callback(WebViewJavascriptBridge); &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.WVJBCallbacks) &#123; <span class="keyword">return</span> <span class="built_in">window</span>.WVJBCallbacks.push(callback); &#125;</span><br><span class="line">    <span class="built_in">window</span>.WVJBCallbacks = [callback];</span><br><span class="line">    <span class="keyword">var</span> WVJBIframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">    WVJBIframe.style.display = <span class="string">'none'</span>;</span><br><span class="line">    WVJBIframe.src = <span class="string">'wvjbscheme://__BRIDGE_LOADED__'</span>;</span><br><span class="line">    <span class="built_in">document</span>.documentElement.appendChild(WVJBIframe);</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">document</span>.documentElement.removeChild(WVJBIframe) &#125;, <span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/*  call setupWebViewJavascriptBridge and then use the bridge to register handlers and call ObjC handlers:*/</span></span><br><span class="line"> setupWebViewJavascriptBridge(<span class="function"><span class="keyword">function</span>(<span class="params">bridge</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* Initialize your app here */</span></span><br><span class="line">    bridge.registerHandler(<span class="string">'JS Echo'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data, responseCallback</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"JS Echo called with:"</span>, data)</span><br><span class="line">        responseCallback(data)</span><br><span class="line">    &#125;)</span><br><span class="line">    bridge.callHandler(<span class="string">'ObjC Echo'</span>, &#123;<span class="string">'key'</span>:<span class="string">'value'</span>&#125;, <span class="function"><span class="keyword">function</span> <span class="title">responseCallback</span>(<span class="params">responseData</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"JS received response:"</span>, responseData)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
 <li><a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="noopener">WebViewJavascriptBridge</a></li>
 <li><a href="https://yq.aliyun.com/articles/37067" target="_blank" rel="noopener">WebViewJavascriptBridge详细使用</a></li>
 <li><a href="http://www.jianshu.com/p/d45ce14278c7" target="_blank" rel="noopener">WebViewJavascriptBridge原理解析</a></li>
@@ -260,7 +261,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/02/WebViewJavascriptBridge 前端用法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/02/Js桥接/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -274,15 +275,11 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/前端开发环境[MAC版]/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          前端开发环境[MAC版]
-        
-      </div>
-    </a>
   
+    <a href="/2018/05/02/前端开发环境[MAC版]/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端开发环境[MAC版]</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -323,7 +320,7 @@ ga('send', 'pageview');
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 痞老板
+    		&copy; 2018 Dylan
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
