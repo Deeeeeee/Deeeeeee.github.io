@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+  <!-- 引入css 框架 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .page {
+      padding: 10px;
+    }
+
+    .flex {
+      width: 100%;
+      display: flex;
+    }
+
+    #text {
+      width: 50%;
+      height: 500px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      resize: none;
+      /* margin-right: 10px; */
+      padding: 10px;
+    }
+
+    #list {
+      padding: 10px;
+      width: 50%;
+      height: 500px;
+      overflow: auto;
+      border: 1px solid #ccc;
+    }
+    .list-item{
+      /* 单行溢出... */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #btn {
+      width: 100%;
+      height: 40px;
+      background-color: #88f;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .ml-8{margin-left: 8px;}
+    .mb-8{margin-bottom: 8px;}
+    .text-red{color: #E53E3E}
+    .text-green{color: #48BB78;}
+    .text-yellow{color: #ED8936;}
+    .text-gray{color: #666;}
+  </style>
+</head>
+
+<body>
+  <div id="app" class="page">
+    <div class="flex">
+      <textarea class="" v-model="text" id="text" cols="30" rows="10" placeholder="请输入接龙内容">
+      </textarea>
+      <div class="list ml-8" id="list">
+        <div v-for="(item, index) in rankList" :key="index+item" class="list-item" :class="{'mb-8': index === 1, 'text-danger': index === spyIndex}">
+          <span class="index text-yellow" v-if="index === 0"> 大王 </span>
+          <span class="index text-green" v-else-if="index === 1"> 小王 </span>
+          <span class="index " v-else>{{index - 1}}</span>
+          
+          <span class="ml-8">{{item}}</span>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="btn mb-8" @click="genList" id="btn">生成排序</button>
+    <button class="btn" @click="genSpy" id="btn">查看间谍</button>
+  </div>
+
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        text: '',
+        rankList: [],
+        spyIndex: -1
+
+      },
+      methods: {
+        // 生成新列表
+        genList () {
+          this.spyIndex = -1
+          const rowList = this.text.split('\n')
+          // console.log(rowList)
+          // 去除rowList每项两端的空格  筛选出 以数字和.开头的 字符串 并去掉第一个.和前面的数字
+          const arr = rowList.map(item => item.trim()).filter(item => /^[0-9]+\./.test(item)).map(item => item.replace(/^[0-9]+\./, ''))
+          console.log(arr)
+          // 随机排序
+          arr.sort(function () {
+            return Math.random() - 0.5
+          })
+          console.log(arr)
+          this.rankList = arr
+          // // 添加序号 并插入#list中
+          // const html = arr.map((item, index) => {
+          //   return `<div>${index + 1}. ${item}</div>`
+          // }).join('')
+          // console.log(html)
+          // document.getElementById('list').innerHTML = html
+        },
+        genSpy () {
+          const len = this.rankList.length
+          const spyIndex = Math.floor(Math.random() * (len -2))
+          this.spyIndex = spyIndex + 2
+          console.log(spyIndex + 2)
+        }
+
+        // 生成特殊点
+      }
+    })
+  </script>
+</body>
+
+</html>
