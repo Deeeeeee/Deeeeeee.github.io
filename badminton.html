@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>·King·</title>
   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
   <!-- 引入css 框架 -->
   <style>
@@ -62,6 +63,9 @@
     .text-green{color: #48BB78;}
     .text-yellow{color: #ED8936;}
     .text-gray{color: #666;}
+    .flip-list-move {
+      transition: transform 1s;
+    }
   </style>
 </head>
 
@@ -72,10 +76,11 @@
       </textarea>
       <div class="list ml-8" id="list">
         <div v-for="(item, index) in rankList" :key="index+item" class="list-item" :class="{'mb-8': index === 1, 'text-red': index === spyIndex}">
-          <span class="index text-yellow" v-if="index === 0"> 大王 </span>
-          <span class="index text-green" v-else-if="index === 1"> 小王 </span>
-          <span class="index " v-else>{{index - 1}}</span>
-          
+          <template v-if="!loading">
+            <span class="index text-yellow" v-if="index === 0"> 大王 </span>
+            <span class="index text-green" v-else-if="index === 1"> 小王 </span>
+            <span class="index " v-else>{{index - 1}}</span>
+          </template>
           <span class="ml-8">{{item}}</span>
         </div>
       </div>
@@ -92,12 +97,15 @@
       data: {
         text: '',
         rankList: [],
-        spyIndex: -1
-
+        spyIndex: -1,
+        loading: false
       },
       methods: {
         // 生成新列表
         genList () {
+          if(this.loading) return
+          this.rankList = []
+          this.loading = true
           this.spyIndex = -1
           const rowList = this.text.split('\n')
           // console.log(rowList)
@@ -109,7 +117,19 @@
             return Math.random() - 0.5
           })
           console.log(arr)
-          this.rankList = arr
+          // 遍历arr 每隔300毫秒 倒序插入到this.rankList中
+          let i = 0
+          const timer = setInterval(() => {
+            if (i >= arr.length) {
+              clearInterval(timer)
+              this.loading = false
+              return
+            }
+            this.rankList.unshift(arr[i])
+            i++
+          }, 300)
+
+          // this.rankList = arr
           // // 添加序号 并插入#list中
           // const html = arr.map((item, index) => {
           //   return `<div>${index + 1}. ${item}</div>`
