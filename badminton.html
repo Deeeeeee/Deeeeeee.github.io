@@ -71,7 +71,7 @@
       <textarea class="" v-model="text" id="text" cols="30" rows="10" placeholder="请输入接龙内容">
       </textarea>
       <div class="list ml-8" id="list">
-        <div v-for="(item, index) in rankList" :key="index+item" class="list-item" :class="{'mb-8': index === 1, 'text-danger': index === spyIndex}">
+        <div v-for="(item, index) in rankList" :key="index+item" class="list-item" :class="{'mb-8': index === 1, 'text-red': index === spyIndex}">
           <span class="index text-yellow" v-if="index === 0"> 大王 </span>
           <span class="index text-green" v-else-if="index === 1"> 小王 </span>
           <span class="index " v-else>{{index - 1}}</span>
@@ -83,7 +83,7 @@
 
 
     <button class="btn mb-8" @click="genList" id="btn">生成排序</button>
-    <button class="btn" @click="genSpy" id="btn">查看间谍</button>
+    <button class="btn" @click="genSpy" id="btn">查看卧底</button>
   </div>
 
   <script>
